@@ -1,0 +1,7 @@
+>>> 
+ RESTART: C:/Users/Kyle_y50-70/Desktop/Neural Nets/Tensorflow Tutorial #1/mnistBeginners.py 
+Extracting /tmp/tensorflow/mnist/input_data\train-images-idx3-ubyte.gz
+Extracting /tmp/tensorflow/mnist/input_data\train-labels-idx1-ubyte.gz
+Extracting /tmp/tensorflow/mnist/input_data\t10k-images-idx3-ubyte.gz
+Extracting /tmp/tensorflow/mnist/input_data\t10k-labels-idx1-ubyte.gz
+0.9199
