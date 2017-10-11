@@ -1,0 +1,17 @@
+RESTART: C:/Users/Kyle_y50-70/Desktop/Neural Nets/Tensorflow Tutorial #1/Wide_und_DeepTutorial.py 
+Training data is downloaded to C:\Users\KYLE_Y~1\AppData\Local\Temp\tmp_0jdjlev
+Test data is downloaded to C:\Users\KYLE_Y~1\AppData\Local\Temp\tmp4nibo154
+WARNING:tensorflow:enqueue_data was called with num_epochs and num_threads > 1. num_epochs is applied per thread, so this will produce more epochs than you probably intend. If you want to limit epochs, use one thread.
+WARNING:tensorflow:enqueue_data was called with shuffle=False and num_threads > 1. This will create multiple threads, all reading the array/dataframe in order. If you want examples read in order, use one thread; if you want multiple threads, enable shuffling.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+WARNING:tensorflow:Casting <dtype: 'float32'> labels to bool.
+model directory = C:\Users\KYLE_Y~1\AppData\Local\Temp\tmpl_b_vwua
+accuracy: 0.823414
+accuracy_baseline: 0.763774
+auc: 0.862073
+auc_precision_recall: 0.68326
+average_loss: 0.413356
+global_step: 2000
+label/mean: 0.236226
+loss: 41.2874
+prediction/mean: 0.238515

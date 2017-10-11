@@ -66,6 +66,7 @@ def parse_input_file(filename):
 
     labels = []
     data = []
+    #z = 0
 
     with open(filename, "r") as file:
         for line in file:
@@ -100,9 +101,9 @@ def parse_input_file(filename):
                    
                 else:
                     print ("Bad input data")
+            #z+=1
             
-            
-        return data, labels
+    return data, labels
 
 def neural_net_initializer(filename):
 
@@ -147,10 +148,16 @@ def neural_net_initializer(filename):
         for epoch in range(5000):
             batch = random.sample(train_dataSet, 25)
             inputs_batch, labels_batch = zip(*batch)
-            loss_output, prediction_output, _ = sess.run(
-                [loss, predictions, train],
-                feed_dict={inputs: inputs_batch,
-                           labels: labels_batch})
+            try:
+                loss_output, prediction_output, _ = sess.run([loss, predictions, train],
+                                                         feed_dict={
+                                                             inputs: inputs_batch,
+                                                             myLabels: labels_batch
+                                                             })
+            except:
+                print(data)
+                print(labels_batch)
+                exit()
 
             # print("Prediction output", prediction_output)
             # print("Labels batch", labels_batch)
@@ -161,10 +168,11 @@ def neural_net_initializer(filename):
 
         batch = random.sample(test_dataset, 100)
         inputs_batch, labels_batch = zip(*batch)
-        loss_output, prediction_output, _ = sess.run(
-            [loss, predictions, train],
-            feed_dict={inputs: inputs_batch,
-                       labels: labels_batch})
+        loss_output, prediction_output, _ = sess.run([loss, predictions, train],
+                                                     feed_dict={
+                                                         inputs: inputs_batch,
+                                                         myLabels: labels_batch
+                                                         })
         accuracy = np.mean(labels_batch == prediction_output)
 
         f = open('output.txt', 'w')
